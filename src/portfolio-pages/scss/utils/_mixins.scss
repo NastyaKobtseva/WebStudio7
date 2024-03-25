@@ -1,0 +1,4 @@
+@mixin flex-around ($display, $j-content) {
+    display: $display;
+    justify-content: $j-content;
+}

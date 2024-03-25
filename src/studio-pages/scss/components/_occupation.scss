@@ -1,0 +1,118 @@
+@import "../utils/mixins";
+
+.occupation__title {
+    color: #212121;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.08px;
+    padding: 0 0 50px 0;
+}
+
+.group {
+    @include flex-around($display:flex, $j-content:center);
+    gap: 30px;
+    padding: 0 0 94px 0;
+}
+
+.group__content {
+    position: relative;
+    transition: transform 0.3s linear;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.group__text-one {
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    @include flex-around($display:flex, $j-content:center);
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(100%);
+    transition: transform 0.5s, opacity 0.5s;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+.group__content:hover .group__text-one {
+    transform: translate(-50%, -50%) translateY(0);
+    opacity: 1;
+}
+
+.group__content-two {
+    position: relative;
+    transition: transform 0.3s linear;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.group__text-two {
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    @include flex-around($display:flex, $j-content:center);
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(100%);
+    transition: transform 0.5s, opacity 0.5s;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+.group__content-two:hover .group__text-two {
+    transform: translate(-50%, -50%) translateY(0);
+    opacity: 1;
+}
+
+.group__content-three {
+    position: relative;
+    transition: transform 0.3s linear;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.group__text-three {
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    @include flex-around($display:flex, $j-content:center);
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(100%);
+    transition: transform 0.5s, opacity 0.5s;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+.group__content-three:hover .group__text-three {
+    transform: translate(-50%, -50%) translateY(0);
+    opacity: 1;
+}
+
+@media (max-width: 1024px) {
+    .occupation {
+        display: none;
+    }
+}

@@ -1,0 +1,68 @@
+@import "../utils/mixins";
+
+.customers__title {
+    color: #212121;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.08px;
+    padding: 94px 0 50px 0;
+}
+.regular {
+    align-items: center;
+    @include flex-around($display:flex, $j-content:center);
+    gap: 30px;
+    padding: 0 0 94px 0;
+}
+
+.regular__photo-svg {
+    border-radius: 4px;
+    border: 2px solid #AFB1B8;
+    width: 125px;
+    height: 50px;
+    fill: #afb1b8;
+    padding: 21px;
+    cursor: pointer;
+    transition: fill 0.3s linear, transform 0.3s linear;
+    &:hover {
+        fill: #2196F3;
+        border: 2px solid #2196F3;
+        transform: scale(1.1);
+        animation: photoRegular 5s infinite;
+    }
+}
+
+@keyframes photoRegular {
+    0% {
+        fill: #2196F3;
+        border: 2px solid #2196F3;
+    }
+    45% {
+        fill: #2125f3;
+        border: 2px solid #2125f3;
+    }
+    95% {
+        fill: #9f21f3;
+        border: 2px solid #9f21f3;
+    }
+}
+
+@media (max-width: 1024px) {
+    .regular {
+        flex-wrap: wrap;
+    }
+    .regular__photo-svg {
+        height: 65px;
+        width: 157px;
+    }
+}
+
+@media (max-width: 480px) {
+    .regular__photo-svg {
+        padding: 15px;
+        width: 92px;
+    }
+}

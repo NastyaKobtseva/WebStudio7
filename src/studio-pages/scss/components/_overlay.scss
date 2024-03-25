@@ -1,0 +1,104 @@
+@import "../utils/mixins";
+@import "../utils/placeholders";
+
+.overlay {
+    background-image: url("../image/chapter-one/Img.header.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay__content {
+    flex-direction: column;
+    @extend %flex-box;
+}
+
+.overlay__title {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 60px;
+    letter-spacing: 2.64px;
+    text-transform: uppercase;
+    padding: 147px 0 30px 0;
+}
+
+.overlay__button {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.96px;
+    padding: 12px 32px;
+    cursor: pointer;
+    border-radius: 4px;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    border: none;
+    margin-bottom: 200px;
+    transition: transform 0.3s linear;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.overlay__button span {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s;
+    transform-origin: 50% 0;
+    transform-style: preserve-3d;
+    .csstransforms3d &::before {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #2196F3;
+        content: attr(data-hover);
+        transition: background-color 0.3s;
+        transform: rotateX(-90deg);
+        transform-origin: 50% 0;
+    }
+}
+
+.overlay__button:hover span, 
+.overlay__button:focus span {
+    transform: rotateX(90deg) translateY(-22px);
+}
+
+.csstransforms3d .overlay__button:hover span::before, 
+.csstransforms3d .overlay__button:focus span::before {
+    background-color: #2196F3;
+}
+
+@media (max-width: 480px) {
+    .overlay__title {
+        color: #FFF;
+        text-align: center;
+        font-family: 'Roboto';
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 42px;
+        letter-spacing: 1.56px;
+        text-transform: uppercase;
+    }
+    .overlay__button {
+        font-size: 16px;
+        padding: 10px 22px;
+    }
+}
+
+@media (max-device-pixel-ratio: 2), (-webkit-max-device-pixel-ratio: 2), 
+(max-resolution: 192dpi), (max-resolution: 2dppx) {
+    .overlay {
+        background-image: url("../image/chapter-one/Img.header2x.png");
+    }
+}
