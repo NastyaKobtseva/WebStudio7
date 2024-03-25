@@ -545,7 +545,7 @@ li {
   }
   .product__photo:hover .product__photo-text {
     opacity: 1;
-    transform: translateX(-48%) translateY(-100%);
+    transform: translateX(-49%) translateY(-100%);
   }
 }
 .newsletter__button, .newsletter {
