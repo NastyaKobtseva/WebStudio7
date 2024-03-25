@@ -96,8 +96,8 @@
     }
 }
 
-@media (max-device-pixel-ratio: 2), (-webkit-max-device-pixel-ratio: 2), 
-(max-resolution: 192dpi), (max-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi), (min-resolution: 2dppx) {
     .overlay {
         background-image: url("../image/chapter-one/Img.header2x.png");
     }
