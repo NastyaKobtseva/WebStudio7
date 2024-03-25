@@ -779,7 +779,7 @@ li {
 @media (max-width: 768px) {
   .modal {
     width: 328px;
-    height: 376px;
+    height: 390px;
   }
   .search__contact-name {
     font-size: 10px;
